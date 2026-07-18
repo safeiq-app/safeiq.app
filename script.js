@@ -1,22 +1,16 @@
 /* ============================================================
    Safe IQ landing page — script.js
-   No frameworks, no dependencies. Vanilla JS, ~2KB.
+   Vanilla JS, no dependencies. ~2KB.
    ============================================================ */
 
 (() => {
   'use strict';
 
-  /* --------------------------------------------------
-     Dynamic year in footer
-  -------------------------------------------------- */
+  /* ---- Dynamic year ---- */
   const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* --------------------------------------------------
-     Mobile nav toggle
-  -------------------------------------------------- */
+  /* ---- Mobile nav toggle ---- */
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -26,18 +20,35 @@
       navToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Close the mobile menu on any link tap
+    // Close menu on link tap
     navLinks.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!navLinks.classList.contains('open')) return;
+      const clickedInsideMenu = navLinks.contains(e.target) || navToggle.contains(e.target);
+      if (!clickedInsideMenu) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
+    });
   }
 
-  /* --------------------------------------------------
-     Sticky header — add shadow when scrolled
-  -------------------------------------------------- */
+  /* ---- Sticky header shadow on scroll ---- */
   const header = document.getElementById('siteHeader');
   if (header) {
     const onScroll = () => {
@@ -47,19 +58,14 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* --------------------------------------------------
-     Scroll-reveal via IntersectionObserver
-     Applies "in-view" class to any element with .reveal
-     when it enters the viewport, only once.
-  -------------------------------------------------- */
+  /* ---- Scroll-reveal via IntersectionObserver ---- */
   const revealTargets = document.querySelectorAll(
-    '.hero-title, .hero-subtitle, .hero-cta-row, .hero-visual, ' +
-    '.section h2, .section .lead, ' +
-    '.feature-card, .how-step, .tech-card, .roadmap-col, .faq-item, ' +
-    '.stat, .cta-final-title, .cta-final-sub'
+    '.hero-icon, .hero-badge, .hero-title, .hero-subtitle, .hero-cta-row, ' +
+    '.section-heading, .section .lead, ' +
+    '.feature, .tech-card, .phone-frame, ' +
+    '.preview-note, .maker-links, .link-chip'
   );
 
-  // Give each target the base class so opacity starts at 0
   revealTargets.forEach((el) => el.classList.add('reveal'));
 
   if ('IntersectionObserver' in window) {
@@ -68,34 +74,30 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('in-view');
-            io.unobserve(entry.target); // fire once only
+            io.unobserve(entry.target);
           }
         });
       },
       {
         root: null,
-        rootMargin: '0px 0px -60px 0px', // fire slightly before element top hits viewport
+        rootMargin: '0px 0px -50px 0px',
         threshold: 0.05,
       }
     );
     revealTargets.forEach((el) => io.observe(el));
   } else {
-    // Fallback for very old browsers — just show everything immediately
+    // Fallback for older browsers
     revealTargets.forEach((el) => el.classList.add('in-view'));
   }
 
-  /* --------------------------------------------------
-     Stagger reveal within grids (add small delays)
-  -------------------------------------------------- */
+  /* ---- Stagger reveal in grids ---- */
   const stagger = (selector, delayStep = 80) => {
     document.querySelectorAll(selector).forEach((el, i) => {
       el.style.transitionDelay = `${i * delayStep}ms`;
     });
   };
-  stagger('.features-grid .feature-card');
-  stagger('.how-grid .how-step', 120);
-  stagger('.tech-grid .tech-card', 60);
-  stagger('.roadmap-columns .roadmap-col', 100);
-  stagger('.stats-inner .stat', 100);
+  stagger('.features .feature', 100);
+  stagger('.tech-grid .tech-card', 70);
+  stagger('.maker-links .link-chip', 60);
 
 })();
