@@ -162,7 +162,7 @@ recruiter, or fellow builder who wants a technical walkthrough of any of
 these — please reach out.
 
 - **Instagram (product):** [@safeiq.app](https://instagram.com/safeiq.app)
-- **GitHub:** [github.com/chiranjitchakma](https://github.com/chiranjitchakma)
+- **GitHub:** [github.com/chiranjitchakma]([https://github.com/chiranjitchakma](https://github.com/safeiq-app/safeiq.app))
 - **Email:** chiranjitc.official@gmail.com
 
 ---
