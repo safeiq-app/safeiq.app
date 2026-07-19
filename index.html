@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0A0A0F" />
 
   <title>Safe IQ — Community safety, in real time.</title>
@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -39,29 +39,20 @@
   <header class="site-header" id="siteHeader">
     <nav class="nav-inner" aria-label="Primary">
       <a class="brand" href="#top" aria-label="Safe IQ home">
-        <img
-          class="brand-icon"
-          src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg"
-          alt=""
-          width="28"
-          height="28"
-        />
+        <img class="brand-icon" src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg" alt="" width="28" height="28" />
         <span class="brand-name">Safe IQ</span>
       </a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
-
       <ul class="nav-links" id="navLinks">
-        <li><a href="#what">What it is</a></li>
         <li><a href="#features">Features</a></li>
+        <li><a href="#preview">Preview</a></li>
         <li><a href="#tech">Under the hood</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#maker">Maker</a></li>
         <li class="cta-item">
-          <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="nav-cta">
-            Follow updates
-          </a>
+          <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="nav-cta">Follow updates</a>
         </li>
       </ul>
     </nav>
@@ -69,196 +60,356 @@
 
 
   <!-- ========================================================== -->
-  <!--                          HERO                               -->
+  <!--                    HERO — 2 COLUMN                          -->
   <!-- ========================================================== -->
   <section class="hero" id="top">
     <div class="hero-glow" aria-hidden="true"></div>
 
     <div class="container hero-inner">
-      <img
-        class="hero-icon"
-        src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg"
-        alt="Safe IQ app icon"
-        width="112"
-        height="112"
-      />
+      <!-- LEFT: content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Coming soon to Google Play · Made in Mysuru 🇮🇳
+        </div>
 
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Coming soon to Google Play
-      </div>
+        <h1 class="hero-title">
+          Community safety, <span class="gradient-text">in real time.</span>
+        </h1>
 
-      <h1 class="hero-title">
-        Community safety,<br />
-        <span class="gradient-text">in real time.</span>
-      </h1>
-
-      <p class="hero-subtitle">
-        Safe IQ turns your neighborhood into a live safety network.
-        Report a hazard in 30 seconds. See what's happening around you on a
-        live map. Send an SOS when it matters. Built in Mysuru, for
-        everyone, everywhere.
-      </p>
-
-      <div class="hero-cta-row">
-        <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="btn btn-primary">
-          Follow the journey
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="7" y1="17" x2="17" y2="7"/>
-            <polyline points="7 7 17 7 17 17"/>
-          </svg>
-        </a>
-        <a href="#what" class="btn btn-ghost">Learn more</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================== -->
-  <!--                      WHAT IT IS                             -->
-  <!-- ========================================================== -->
-  <section class="section-tight" id="what" aria-labelledby="whatHeading">
-    <div class="container narrow">
-      <p class="eyebrow">The idea</p>
-      <h2 id="whatHeading" class="section-heading">
-        Safety information lives everywhere —
-        <span class="text-muted">and nowhere.</span>
-      </h2>
-      <p class="lead">
-        A pothole on your street is talked about in a WhatsApp group. A power
-        outage is reported on Twitter with the wrong location. A theft
-        happens down the road and neighbors only hear about it days later.
-      </p>
-      <p class="lead">
-        There is no shared, real-time picture of what's safe and what isn't.
-        <strong>Safe IQ is being built to be that picture</strong> — owned by
-        the community, not by any platform.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- ========================================================== -->
-  <!--                       FEATURES                              -->
-  <!-- ========================================================== -->
-  <section class="section" id="features" aria-labelledby="featuresHeading">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">What's inside</p>
-        <h2 id="featuresHeading" class="section-heading">Four pillars.</h2>
-      </div>
-
-      <div class="features">
-        <article class="feature">
-          <div class="feature-icon feature-icon-emerald" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h3>Report in 30 seconds</h3>
-            <p>Pick a category, drop a pin, snap up to 5 photos, add a quick
-            note. Done. Your report is live for everyone in the area.</p>
-          </div>
-        </article>
-
-        <article class="feature">
-          <div class="feature-icon feature-icon-blue" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h3>Alerts, only for near you</h3>
-            <p>A live map of what's happening around you. Critical hazards
-            trigger push notifications for your specific area. No spam from
-            across the city.</p>
-          </div>
-        </article>
-
-        <article class="feature">
-          <div class="feature-icon feature-icon-red" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-              <line x1="12" y1="9" x2="12" y2="13"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h3>One-tap SOS</h3>
-            <p>Emergency? Send a beacon to the nearby community with your
-            location, in one press. No fumbling through menus. When it
-            matters most, it's already ready.</p>
-          </div>
-        </article>
-
-        <article class="feature">
-          <div class="feature-icon feature-icon-amber" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-          </div>
-          <div class="feature-body">
-            <h3>Verified by the community</h3>
-            <p>Every report has a confidence score built from neighbor
-            verifications. Real problems get attention. Fake ones get
-            filtered out.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================================== -->
-  <!--                    APP PREVIEW                              -->
-  <!-- ========================================================== -->
-  <section class="section preview" aria-labelledby="previewHeading">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">Preview</p>
-        <h2 id="previewHeading" class="section-heading">
-          The app you'll actually open every day.
-        </h2>
-        <p class="lead center-lead">
-          Dark, fast, familiar. A live map takes the top half; a bottom
-          sheet with your neighborhood's safety picture takes the rest.
+        <p class="hero-subtitle">
+          Safe IQ turns your neighborhood into a live safety network.
+          Report a hazard in 30 seconds. See what's happening around you
+          on a live map. Send an SOS when it matters.
         </p>
+
+        <div class="hero-cta-row">
+          <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="btn btn-primary">
+            Follow the journey
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-ghost">See features</a>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="trust-num">30s</div>
+            <div class="trust-label">Report time</div>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <div class="trust-num">₹0</div>
+            <div class="trust-label">Cost, forever</div>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <div class="trust-num">5</div>
+            <div class="trust-label">Photos per report</div>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <div class="trust-num">100%</div>
+            <div class="trust-label">Location-aware</div>
+          </div>
+        </div>
       </div>
 
-      <div class="phone-frame" aria-hidden="true">
-        <div class="phone-screen">
-          <div class="phone-notch"></div>
-          <div class="phone-content">
-            <div class="phone-map">
-              <div class="phone-marker phone-marker-red"></div>
-              <div class="phone-marker phone-marker-amber"></div>
-              <div class="phone-marker phone-marker-emerald"></div>
-              <div class="phone-user-dot"></div>
-            </div>
-            <div class="phone-sheet">
-              <div class="phone-handle"></div>
-              <div class="phone-hi">Hi, Chiranjit</div>
-              <div class="phone-chip">
-                <span class="phone-chip-icon"></span>
-                2 critical hazards nearby
+      <!-- RIGHT: phone preview -->
+      <div class="hero-visual">
+        <div class="hero-icon-badge">
+          <img src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg" alt="Safe IQ app icon" width="88" height="88" />
+        </div>
+        <div class="phone-frame phone-frame-primary">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-content">
+              <div class="phone-map">
+                <div class="phone-marker phone-marker-red"></div>
+                <div class="phone-marker phone-marker-amber"></div>
+                <div class="phone-marker phone-marker-emerald"></div>
+                <div class="phone-user-dot"></div>
               </div>
-              <div class="phone-tiles">
-                <div class="phone-tile">Report</div>
-                <div class="phone-tile">Helpline</div>
-                <div class="phone-tile">Parking</div>
+              <div class="phone-sheet">
+                <div class="phone-handle"></div>
+                <div class="phone-hi">Hi, Chiranjit</div>
+                <div class="phone-chip">
+                  <span class="phone-chip-icon"></span>
+                  2 critical hazards nearby
+                </div>
+                <div class="phone-tiles">
+                  <div class="phone-tile">Report</div>
+                  <div class="phone-tile">Helpline</div>
+                  <div class="phone-tile">Parking</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <p class="preview-note">
-        A CSS mockup for now — real screenshots land here when the Play Store
-        launch drops.
-      </p>
+
+  <!-- ========================================================== -->
+  <!--                    LOGOS / TECH BAR                         -->
+  <!-- ========================================================== -->
+  <section class="logo-bar" aria-label="Built with">
+    <div class="container">
+      <p class="logo-bar-label">Built with proven tools</p>
+      <div class="logo-bar-items">
+        <div class="logo-item">Kotlin</div>
+        <div class="logo-item">Jetpack Compose</div>
+        <div class="logo-item">Firebase</div>
+        <div class="logo-item">Google Maps</div>
+        <div class="logo-item">Gemini AI</div>
+        <div class="logo-item">Material 3</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================== -->
+  <!--                    THE PROBLEM                              -->
+  <!-- ========================================================== -->
+  <section class="section problem-section" aria-labelledby="problemHeading">
+    <div class="container problem-grid">
+      <div class="problem-content">
+        <p class="eyebrow">The problem</p>
+        <h2 id="problemHeading" class="section-heading">
+          Safety data lives everywhere — <span class="text-muted">and nowhere.</span>
+        </h2>
+        <p class="lead">
+          A pothole on your street is talked about in a WhatsApp group.
+          A power outage is on Twitter with the wrong location. A theft
+          happens down the road and neighbors only hear about it days later.
+        </p>
+        <p class="lead">
+          There's no shared, real-time picture of what's safe and what
+          isn't. <strong>Safe IQ is being built to be that picture</strong>
+          — owned by the community, not by any platform.
+        </p>
+      </div>
+      <div class="problem-visual">
+        <div class="floating-chip chip-1">
+          <div class="chip-dot chip-dot-red"></div>
+          Pothole reported
+        </div>
+        <div class="floating-chip chip-2">
+          <div class="chip-dot chip-dot-amber"></div>
+          Power outage
+        </div>
+        <div class="floating-chip chip-3">
+          <div class="chip-dot chip-dot-emerald"></div>
+          All clear
+        </div>
+        <div class="floating-chip chip-4">
+          <div class="chip-dot chip-dot-red"></div>
+          Roadwork ahead
+        </div>
+        <div class="floating-chip chip-5">
+          <div class="chip-dot chip-dot-amber"></div>
+          Water shortage
+        </div>
+        <div class="floating-connector"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================== -->
+  <!--                       FEATURES — 6                          -->
+  <!-- ========================================================== -->
+  <section class="section" id="features" aria-labelledby="featuresHeading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What's inside</p>
+        <h2 id="featuresHeading" class="section-heading">A safety toolkit for real neighborhoods.</h2>
+        <p class="lead">Six pillars that work together to make everyday safety information usable, verifiable, and shared.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <div class="feature-icon feature-icon-emerald" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Report in 30 seconds</h3>
+          <p>Pick a category, drop a pin, snap up to 5 photos, add a quick note. Done. Your report is live for everyone in the area.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon feature-icon-blue" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3>Alerts, only for near you</h3>
+          <p>A live map of what's happening around you. Critical hazards trigger push notifications for your specific area — no spam from across the city.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon feature-icon-red" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>One-tap SOS</h3>
+          <p>Emergency? Send a beacon to the nearby community with your location, in one press. No fumbling through menus. When it matters most, it's ready.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon feature-icon-amber" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Verified by community</h3>
+          <p>Every report has a confidence score built from neighbor verifications. Real problems get attention. Fake ones get filtered out.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon feature-icon-cyan" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="18" height="12" rx="2" ry="2"/><line x1="16" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3>My parking</h3>
+          <p>Save where you parked. Multiple spots supported. Directions back to your car open in Google Maps. "Which floor was it?" — solved.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon feature-icon-violet" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>AI safety assistant</h3>
+          <p>Ask questions about safety in your area, or get a plain-language summary of what's happening nearby. Powered by Gemini with your location context.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================== -->
+  <!--                    HOW IT WORKS — 3 STEPS                   -->
+  <!-- ========================================================== -->
+  <section class="section how-section" aria-labelledby="howHeading">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">How it works</p>
+        <h2 id="howHeading" class="section-heading">Three moves. Everyone safer.</h2>
+      </div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h3>You see something</h3>
+          <p>A pothole, a leaking transformer, an unsafe spot at night. Open Safe IQ, tap Report.</p>
+        </div>
+        <div class="how-connector" aria-hidden="true"></div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h3>The area gets alerted</h3>
+          <p>Everyone within your neighborhood sees the report on their live map. Critical hazards trigger push notifications.</p>
+        </div>
+        <div class="how-connector" aria-hidden="true"></div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h3>The community verifies</h3>
+          <p>Neighbors confirm or reject. Confidence builds. Real problems get attention. Fake ones filtered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================== -->
+  <!--                    APP PREVIEW GALLERY                      -->
+  <!-- ========================================================== -->
+  <section class="section" id="preview" aria-labelledby="previewHeading">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Preview</p>
+        <h2 id="previewHeading" class="section-heading">The app you'll actually open every day.</h2>
+        <p class="lead center-lead">Dark, fast, familiar. A live map takes the top; a bottom sheet with your neighborhood's safety picture takes the rest.</p>
+      </div>
+
+      <div class="phone-gallery">
+        <!-- Phone 1: Home -->
+        <div class="phone-frame">
+          <div class="phone-label">Home</div>
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-content">
+              <div class="phone-map">
+                <div class="phone-marker phone-marker-red"></div>
+                <div class="phone-marker phone-marker-amber"></div>
+                <div class="phone-marker phone-marker-emerald"></div>
+                <div class="phone-user-dot"></div>
+              </div>
+              <div class="phone-sheet">
+                <div class="phone-handle"></div>
+                <div class="phone-hi">Hi, Chiranjit</div>
+                <div class="phone-chip">
+                  <span class="phone-chip-icon"></span>
+                  2 critical nearby
+                </div>
+                <div class="phone-tiles">
+                  <div class="phone-tile">Report</div>
+                  <div class="phone-tile">Helpline</div>
+                  <div class="phone-tile">Parking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone 2: Report -->
+        <div class="phone-frame">
+          <div class="phone-label">Report</div>
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-content phone-content-solid">
+              <div class="phone-report-header">Report a hazard</div>
+              <div class="phone-form-row">
+                <div class="phone-form-label">Category</div>
+                <div class="phone-form-chips">
+                  <div class="phone-form-chip phone-form-chip-active">Pothole</div>
+                  <div class="phone-form-chip">Water</div>
+                  <div class="phone-form-chip">Power</div>
+                </div>
+              </div>
+              <div class="phone-form-row">
+                <div class="phone-form-label">Severity</div>
+                <div class="phone-form-slider">
+                  <div class="phone-form-slider-fill"></div>
+                  <div class="phone-form-slider-knob"></div>
+                </div>
+              </div>
+              <div class="phone-form-row">
+                <div class="phone-form-label">Photos</div>
+                <div class="phone-form-photos">
+                  <div class="phone-form-photo"></div>
+                  <div class="phone-form-photo"></div>
+                  <div class="phone-form-photo phone-form-photo-add">+</div>
+                </div>
+              </div>
+              <div class="phone-form-btn">Submit report</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone 3: AI -->
+        <div class="phone-frame">
+          <div class="phone-label">AI Assistant</div>
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-content phone-content-solid">
+              <div class="phone-report-header">Safety Assistant</div>
+              <div class="phone-msg phone-msg-user">Anything I should know about my route home?</div>
+              <div class="phone-msg phone-msg-ai">
+                <div class="phone-msg-dot"></div>
+                Based on 3 reports along your usual path, there's a pothole near MG Road junction and roadwork near Metropole. Take the alternative via Sayyaji Rao Road for a smoother ride.
+              </div>
+              <div class="phone-input">Ask about safety…</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="preview-note">CSS mockups for now — real screenshots land here when Play Store 1.0 drops.</p>
     </div>
   </section>
 
@@ -266,70 +417,129 @@
   <!-- ========================================================== -->
   <!--                     UNDER THE HOOD                          -->
   <!-- ========================================================== -->
-  <section class="section" id="tech" aria-labelledby="techHeading">
+  <section class="section tech-section" id="tech" aria-labelledby="techHeading">
     <div class="container">
       <div class="section-head">
         <p class="eyebrow">Under the hood</p>
-        <h2 id="techHeading" class="section-heading">
-          Every choice earned.
-        </h2>
-        <p class="lead">
-          Safe IQ is a solo project. Every part of the stack was chosen
-          deliberately, and the whole thing runs on free tiers so the
-          community pays nothing.
-        </p>
+        <h2 id="techHeading" class="section-heading">Every choice earned.</h2>
+        <p class="lead">Safe IQ is a solo project. Every part of the stack was chosen deliberately, and the whole thing runs on free tiers so the community pays nothing.</p>
       </div>
 
       <div class="tech-grid">
         <div class="tech-card">
           <p class="tech-label">Client</p>
           <h3>Jetpack Compose &mdash; 100% modern Kotlin UI</h3>
-          <p>Compose BOM 2024.05, Kotlin 1.9.24, AGP 8.7.2. Material 3
-          theming, edge-to-edge, dark mode by default. Hilt for DI, Room
-          for local caching where it counts.</p>
+          <p>Compose BOM 2024.05, Kotlin 1.9.24, AGP 8.7.2. Material 3 theming, edge-to-edge, dark mode by default. Hilt for DI, Room for local caching where it counts.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Kotlin 1.9.24</span>
+            <span class="tech-tag">Compose BOM 2024.05</span>
+            <span class="tech-tag">Hilt</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <p class="tech-label">Maps &amp; location</p>
           <h3>Google Maps SDK + FusedLocationProvider</h3>
-          <p>maps-compose 4.4 with marker clustering. Dynamic map padding
-          tracks the bottom-sheet position so the location dot always stays
-          visible. Auto-recenter on user bearing after gesture idle.</p>
+          <p>maps-compose 4.4 with marker clustering. Dynamic map padding tracks the bottom-sheet position so the location dot always stays visible. Auto-recenter after gesture idle.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">maps-compose 4.4</span>
+            <span class="tech-tag">Places SDK 3.5</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <p class="tech-label">Backend</p>
           <h3>Firebase Spark plan &mdash; free tier, forever</h3>
-          <p>Auth with email/password + Google. Firestore for reports,
-          users, verifications, comments. Cloud Messaging for
-          geohash-topic push. Security rules with email-allowlist admin
-          check.</p>
+          <p>Auth with email/password + Google. Firestore for reports, users, verifications, comments. Cloud Messaging for geohash-topic push. Security rules with email-allowlist admin check.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Firestore</span>
+            <span class="tech-tag">Auth</span>
+            <span class="tech-tag">FCM</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <p class="tech-label">Media</p>
           <h3>ImgBB for hazard photos</h3>
-          <p>Firebase Storage requires the paid Blaze plan &mdash; we don't
-          pay. ImgBB is a free public image host. JPEG compression to
-          1600px, EXIF rotation, up to 5 photos per report.</p>
+          <p>Firebase Storage requires the paid Blaze plan &mdash; we don't pay. ImgBB is a free public image host. JPEG compression to 1600px, EXIF rotation, up to 5 photos per report.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">ImgBB API</span>
+            <span class="tech-tag">EXIF</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <p class="tech-label">Intelligence</p>
           <h3>Google Gemini for the AI Assistant</h3>
-          <p>Direct REST API, no Cloud Functions needed. Streaming
-          responses with retry-on-failure. Location + report context
-          injected into the prompt. Voice input via speech recognition,
-          voice output via TTS.</p>
+          <p>Direct REST API, no Cloud Functions needed. Streaming responses with retry-on-failure. Location + report context injected in prompt. Voice via SR + TTS + NLP.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Gemini REST</span>
+            <span class="tech-tag">Voice I/O</span>
+          </div>
         </div>
 
         <div class="tech-card">
           <p class="tech-label">Privacy</p>
           <h3>You own your data. Full stop.</h3>
-          <p>No analytics SDK. No ads SDK. No third-party tracking anywhere.
-          Location is used only for map centering and nearby alerts, and
-          never leaves your device unless you post a report at that
-          location.</p>
+          <p>No analytics SDK. No ads SDK. No third-party tracking anywhere. Location used only for map centering and nearby alerts — never leaves your device unless YOU post a report.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Zero tracking</span>
+            <span class="tech-tag">On-device</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================== -->
+  <!--                          ROADMAP                            -->
+  <!-- ========================================================== -->
+  <section class="section roadmap-section" id="roadmap" aria-labelledby="roadmapHeading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Roadmap</p>
+        <h2 id="roadmapHeading" class="section-heading">Shipped, building, next.</h2>
+      </div>
+
+      <div class="roadmap-cols">
+        <div class="roadmap-col">
+          <div class="roadmap-tag roadmap-tag-shipped">
+            <span class="roadmap-tag-dot"></span>Shipped
+          </div>
+          <ul class="roadmap-list">
+            <li>Map-first home with live reports</li>
+            <li>Marker clustering &amp; Places search</li>
+            <li>Multi-photo reports (up to 5)</li>
+            <li>Community verification &amp; scoring</li>
+            <li>AI safety assistant (voice + text)</li>
+            <li>Admin moderation panel</li>
+            <li>My parking &amp; helpline shortcuts</li>
+          </ul>
+        </div>
+        <div class="roadmap-col">
+          <div class="roadmap-tag roadmap-tag-next">
+            <span class="roadmap-tag-dot"></span>Building
+          </div>
+          <ul class="roadmap-list">
+            <li>Route safety layer &mdash; hazards along path</li>
+            <li>Turn-by-turn voice navigation</li>
+            <li>Contextual AI throughout the app</li>
+            <li>Geohash-based FCM push notifications</li>
+            <li>Auto-recenter after gesture idle</li>
+          </ul>
+        </div>
+        <div class="roadmap-col">
+          <div class="roadmap-tag roadmap-tag-later">
+            <span class="roadmap-tag-dot"></span>Later
+          </div>
+          <ul class="roadmap-list">
+            <li>Public hazard heatmap by region</li>
+            <li>Weekly safety report per neighborhood</li>
+            <li>Integration with municipal helplines</li>
+            <li>Multi-language: Kannada, Hindi, Tamil</li>
+            <li>iOS version (post-Android traction)</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -339,46 +549,53 @@
   <!-- ========================================================== -->
   <!--                       ABOUT MAKER                           -->
   <!-- ========================================================== -->
-  <section class="section" id="maker" aria-labelledby="makerHeading">
-    <div class="container narrow">
-      <p class="eyebrow">Made by</p>
-      <h2 id="makerHeading" class="section-heading">Chiranjit Chakma.</h2>
-      <p class="lead">
-        Self-taught Android developer based in Mysuru, India. Co-manager
-        at Mettaloka Youth Centre — a residential educational centre for
-        alumni of the Mahabodhi Carla Students Home. Building products
-        that make everyday life safer and more meaningful.
-      </p>
-      <p class="lead">
-        Currently applying to MSc Cybersecurity programs at
-        <strong>Saarland University</strong>, <strong>RWTH Aachen</strong>,
-        and <strong>TU Munich</strong>. Safe IQ is one of several apps
-        I've shipped end-to-end — from architecture through Firestore
-        security rules through app-icon design.
-      </p>
+  <section class="section maker-section" id="maker" aria-labelledby="makerHeading">
+    <div class="container">
+      <div class="maker-grid">
+        <div class="maker-content">
+          <p class="eyebrow">Made by</p>
+          <h2 id="makerHeading" class="section-heading">Chiranjit Chakma.</h2>
+          <p class="lead">
+            Self-taught Android developer based in Mysuru, India. Co-manager
+            at Mettaloka Youth Centre &mdash; a residential educational
+            centre for alumni of the Mahabodhi Carla Students Home.
+          </p>
+          <p class="lead">
+            Currently applying to MSc Cybersecurity programs at
+            <strong>Saarland University</strong>, <strong>RWTH Aachen</strong>,
+            and <strong>TU Munich</strong> for the 2026 intake.
+          </p>
+          <div class="maker-links">
+            <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="link-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              @safeiq.app
+            </a>
+            <a href="https://github.com/chiranjitchakma" target="_blank" rel="noopener" class="link-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:chiranjitc.official@gmail.com" class="link-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
 
-      <div class="maker-links">
-        <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="link-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-          @safeiq.app
-        </a>
-        <a href="https://github.com/chiranjitchakma" target="_blank" rel="noopener" class="link-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-          github.com/chiranjitchakma
-        </a>
-        <a href="mailto:chiranjitc.official@gmail.com" class="link-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          Email
-        </a>
+        <div class="maker-side">
+          <h4 class="maker-side-title">Also shipped</h4>
+          <div class="maker-project">
+            <div class="maker-project-name">NetSafe / NetSafe Link</div>
+            <div class="maker-project-desc">Two-app parental control platform with VPN-based per-app blocking, Firestore state sync, biometric app lock.</div>
+          </div>
+          <div class="maker-project">
+            <div class="maker-project-name">WakeMe</div>
+            <div class="maker-project-desc">Offline-first alarm + planner + notes + focus app. 229+ Kotlin files, AI assistant, AES-256-GCM encrypted backups.</div>
+          </div>
+          <div class="maker-project">
+            <div class="maker-project-name">NetSafe X</div>
+            <div class="maker-project-desc">Standalone cybersecurity toolkit (Password Analyzer, Hash Toolbox, HMAC-SHA256 chained audit log) &mdash; MSc portfolio.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -389,8 +606,9 @@
   <!-- ========================================================== -->
   <section class="cta-final" aria-labelledby="ctaHeading">
     <div class="container narrow">
+      <img class="cta-icon" src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg" alt="" width="64" height="64" />
       <h2 id="ctaHeading">Follow along for the launch.</h2>
-      <p>Play Store link drops on Instagram first. Follow to get it before anyone else.</p>
+      <p>Play Store link drops on Instagram first. Follow to get it before anyone else does.</p>
       <a href="https://instagram.com/safeiq.app" target="_blank" rel="noopener" class="btn btn-primary btn-large">
         Follow @safeiq.app
       </a>
@@ -405,24 +623,18 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div class="brand">
-          <img
-            class="brand-icon"
-            src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg"
-            alt=""
-            width="24"
-            height="24"
-          />
+          <img class="brand-icon" src="https://raw.githubusercontent.com/safeiq-app/safeiq.app/main/safe%20iq%20icon.jpg" alt="" width="24" height="24" />
           <span class="brand-name">Safe IQ</span>
         </div>
-        <p class="footer-tag">Community-powered safety, in real time.</p>
+        <p class="footer-tag">Community-powered safety, in real time. Made in Mysuru, for everyone, everywhere.</p>
       </div>
-
       <div class="footer-links">
         <div class="footer-col">
           <p class="footer-col-title">Product</p>
-          <a href="#what">The idea</a>
           <a href="#features">Features</a>
+          <a href="#preview">Preview</a>
           <a href="#tech">Under the hood</a>
+          <a href="#roadmap">Roadmap</a>
         </div>
         <div class="footer-col">
           <p class="footer-col-title">Connect</p>
@@ -430,12 +642,16 @@
           <a href="https://github.com/chiranjitchakma" target="_blank" rel="noopener">GitHub</a>
           <a href="mailto:chiranjitc.official@gmail.com">Email</a>
         </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <a href="#" aria-disabled="true">Privacy (soon)</a>
+          <a href="#" aria-disabled="true">Terms (soon)</a>
+        </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; <span id="year">2026</span> Safe IQ. Built in Mysuru, for everyone, everywhere.</p>
+        <p>&copy; <span id="year">2026</span> Safe IQ. Built with intention.</p>
       </div>
     </div>
   </footer>
