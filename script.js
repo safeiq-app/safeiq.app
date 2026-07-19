@@ -1,6 +1,6 @@
 /* ============================================================
-   Safe IQ landing page — script.js
-   Vanilla JS, no dependencies. ~2KB.
+   Safe IQ — script.js v3
+   Vanilla JS, no dependencies. ~2.5KB.
    ============================================================ */
 
 (() => {
@@ -9,6 +9,7 @@
   /* ---- Dynamic year ---- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 
   /* ---- Mobile nav toggle ---- */
   const navToggle = document.getElementById('navToggle');
@@ -31,8 +32,8 @@
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (!navLinks.classList.contains('open')) return;
-      const clickedInsideMenu = navLinks.contains(e.target) || navToggle.contains(e.target);
-      if (!clickedInsideMenu) {
+      const inside = navLinks.contains(e.target) || navToggle.contains(e.target);
+      if (!inside) {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       }
@@ -48,6 +49,7 @@
     });
   }
 
+
   /* ---- Sticky header shadow on scroll ---- */
   const header = document.getElementById('siteHeader');
   if (header) {
@@ -58,12 +60,31 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+
   /* ---- Scroll-reveal via IntersectionObserver ---- */
   const revealTargets = document.querySelectorAll(
-    '.hero-icon, .hero-badge, .hero-title, .hero-subtitle, .hero-cta-row, ' +
-    '.section-heading, .section .lead, ' +
-    '.feature, .tech-card, .phone-frame, ' +
-    '.preview-note, .maker-links, .link-chip'
+    // Hero
+    '.hero-badge, .hero-title, .hero-subtitle, .hero-cta-row, .hero-trust, .hero-visual, ' +
+    // Logo bar
+    '.logo-bar-label, .logo-item, ' +
+    // Sections
+    '.section-heading, .section .lead, .eyebrow, ' +
+    // Feature cards
+    '.feature, ' +
+    // How steps
+    '.how-step, ' +
+    // Phone gallery
+    '.phone-gallery .phone-frame, ' +
+    // Tech cards
+    '.tech-card, ' +
+    // Roadmap
+    '.roadmap-col, ' +
+    // Maker
+    '.maker-side, .link-chip, ' +
+    // Floating problem chips
+    '.floating-chip, ' +
+    // CTA
+    '.cta-icon'
   );
 
   revealTargets.forEach((el) => el.classList.add('reveal'));
@@ -90,14 +111,21 @@
     revealTargets.forEach((el) => el.classList.add('in-view'));
   }
 
+
   /* ---- Stagger reveal in grids ---- */
   const stagger = (selector, delayStep = 80) => {
     document.querySelectorAll(selector).forEach((el, i) => {
       el.style.transitionDelay = `${i * delayStep}ms`;
     });
   };
-  stagger('.features .feature', 100);
+  stagger('.features .feature', 90);
   stagger('.tech-grid .tech-card', 70);
+  stagger('.roadmap-cols .roadmap-col', 100);
+  stagger('.phone-gallery .phone-frame', 120);
+  stagger('.how-steps .how-step', 150);
   stagger('.maker-links .link-chip', 60);
+  stagger('.logo-bar-items .logo-item', 60);
+  stagger('.floating-chip', 100);
+  stagger('.hero-trust .trust-item', 80);
 
 })();
